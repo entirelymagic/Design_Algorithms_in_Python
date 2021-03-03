@@ -12,5 +12,6 @@
 6. Add `processed_numbers` to `Rational` that counts the total number of created rational numbers.
    - Changed from Exception to ValueError when denominator is 0.
 
-7. Added `__sub__` method in order to perform subtraction for Rational objects.
+7. Added `__sub__` method in order to perform subtraction between Rational objects.
+7. Added `__mul__` method in order to perform multiplication between Rational objects.
 
