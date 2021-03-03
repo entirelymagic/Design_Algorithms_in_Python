@@ -58,3 +58,13 @@ class Rational:
         numerator1 = self.a * other.b
         numerator2 = other.a * self.b
         return numerator1 == numerator2
+
+    def __sub__(self, other):
+        """Overload default __sub__ method
+        Perform subtraction between 2 Rational objects
+        """
+        resulted_numerator = self.a * other.b - self.b * other.a
+        resulted_denominator = self.b * other.b
+        # get lowest common denominator
+        lcd = cmmdc(resulted_numerator, resulted_denominator)
+        return Rational(resulted_numerator//lcd, resulted_denominator//lcd)
