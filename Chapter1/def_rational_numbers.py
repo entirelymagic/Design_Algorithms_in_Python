@@ -83,3 +83,24 @@ class Rational:
         # return a Rational number after it is checked that it is not a irreducible_fraction
         return self._irreducible_fraction(resulted_numerator, resulted_denominator)
 
+    def __truediv__(self, other: 'Rational') -> float:
+        """Overload default __truediv__ method
+        Perform division between 2 Rational objects
+
+        @:return: float
+        """
+        resulted_numerator = self.a * other.b
+        resulted_denominator = self.b * other.a
+        return resulted_numerator/resulted_denominator
+
+    def __floordiv__(self, other: 'Rational'):
+        """Overload default __floordiv__ method
+        Perform floor division between 2 Rational objects
+
+        @:return  irreducible fraction of the 2 numbers as Rational object
+        """
+        resulted_numerator = self.a * other.b
+        resulted_denominator = self.b * other.a
+        # return a Rational number after it is checked that it is not a irreducible_fraction
+        return self._irreducible_fraction(resulted_numerator, resulted_denominator)
+
