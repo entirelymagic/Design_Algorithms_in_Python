@@ -6,16 +6,26 @@ class TestRationalClass:
     r1 = Rational(1, 8)
     r2 = Rational(1, 4)
     r3 = Rational(2, 16)
+    Rational.processed_numbers -= 3
 
     @pytest.fixture()
     def rational(self):
-        rational1 = Rational(1, 2)
-        return rational1
+        pass
 
     def test_error_0_as_denominator(self):
-        """Test if given 0 as denominator for Rational Object raises an Error."""
-        with pytest.raises(Exception):
+        """
+        Test if:
+            - ValueError if numerator is not int
+            - ValueError if denominator is not int
+            - ValueError if denominator is 0
+        """
+
+        with pytest.raises(ValueError):
             Rational(3, 0)
+        with pytest.raises(ValueError):
+            Rational('sal', 1)
+        with pytest.raises(ValueError):
+            Rational(1, 'hy')
 
     def test_rational_numbers_addition(self, rational):
         """Test if 2 rational numbers are returning the correct print value"""
@@ -26,5 +36,4 @@ class TestRationalClass:
         """Test to see comparison between 2 Rational objects"""
         assert self.r1 == self.r3
         assert self.r1 != self.r2
-
 

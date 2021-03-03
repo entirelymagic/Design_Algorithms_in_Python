@@ -7,6 +7,8 @@
     - Created a function `cmmnc` that given 2 numbers get the lowest denominator 
     - Apply the `cmmnc` function to the add function in order to get an irreducible fraction
     
-4.  Created `__eq__` to Rational class in order to check if 2 Rational objects are equal or not.
-5.
+4. Created `__eq__` to Rational class in order to check if 2 Rational objects are equal or not.
+5. Check if numerator or denominator are integers, else raise error
+6. Add `processed_numbers` to `Rational` that counts the total number of created rational numbers.
+   - Changed from Exception to ValueError when denominator is 0.
     

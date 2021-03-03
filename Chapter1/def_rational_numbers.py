@@ -19,12 +19,20 @@ class Rational:
     @:raise Error if b==0
     """
 
+    processed_numbers = 0
+
     def __init__(self, a: int, b: int) -> None:
-        self.a = a
-        if b != 0:
-            self.b = b
+        if type(a) is not int:
+            raise ValueError("Numerator is not an integer")
+        elif type(b) is not int:
+            raise ValueError("Denominator is not an integer")
+        elif b == 0:
+            raise ValueError("Denominator is equal to 0")
         else:
-            raise Exception("Denominator b must be different from 0")
+            self.a = a
+            self.b = b
+            # add a new processed number.
+            Rational.processed_numbers += 1
 
     def __str__(self) -> str:
         """Overload default __str__ method.
