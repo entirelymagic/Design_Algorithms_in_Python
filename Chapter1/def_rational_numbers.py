@@ -50,4 +50,3 @@ class Rational:
         numerator1 = self.a * other.b
         numerator2 = other.a * self.b
         return numerator1 == numerator2
-

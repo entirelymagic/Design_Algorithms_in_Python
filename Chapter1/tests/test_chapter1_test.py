@@ -23,7 +23,8 @@ class TestRationalClass:
         assert r3.__str__() == '3/8'
 
     def test_rational_number_equality(self):
+        """Test to see comparison between 2 Rational objects"""
         assert self.r1 == self.r3
-
+        assert self.r1 != self.r2
 
 
