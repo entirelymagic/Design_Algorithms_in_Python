@@ -30,6 +30,7 @@ class Rational:
         """Overload default __str__ method.
         :return: The string representation of the rational number.
         """
+
         return str(self.a) + '/' + str(self.b)
 
     def __add__(self, other_num: 'Rational') -> 'Rational':
@@ -37,9 +38,16 @@ class Rational:
 
         resulted_numerator = self.a * other_num.b + self.b * other_num.a
         resulted_denominator = self.b * other_num.b
-
         # get the lowest common denominator
         lcd = cmmdc(resulted_numerator, resulted_denominator)
-
         # return the rational number as a irreducible fraction
         return Rational(int(resulted_numerator / lcd), int(resulted_denominator / lcd))
+
+    def __eq__(self, other):
+        """ Overload default __eq__ method.
+        Test to see if 2 objects Rational are equal"""
+
+        numerator1 = self.a * other.b
+        numerator2 = other.a * self.b
+        return numerator1 == numerator2
+
