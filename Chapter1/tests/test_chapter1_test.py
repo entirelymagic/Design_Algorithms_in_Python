@@ -45,3 +45,7 @@ class TestRationalClass:
     def test_rational_number_subtraction(self):
         """Test __sub__ method for Rational objects"""
         assert self.r1 - self.r2
+
+    def test_rational_number_multiplication(self):
+        """test __mul__  method for Rational objects"""
+        assert self.r1 * self.r2
