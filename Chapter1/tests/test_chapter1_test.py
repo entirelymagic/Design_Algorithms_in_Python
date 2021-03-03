@@ -12,12 +12,13 @@ class TestRationalClass:
     def rational(self):
         pass
 
-    def test_error_0_as_denominator(self):
+    def test_value_errors(self):
         """
         Test if:
             - ValueError if numerator is not int
             - ValueError if denominator is not int
             - ValueError if denominator is 0
+            -
         """
 
         with pytest.raises(ValueError):
@@ -26,6 +27,10 @@ class TestRationalClass:
             Rational('sal', 1)
         with pytest.raises(ValueError):
             Rational(1, 'hy')
+        with pytest.raises(ValueError):
+            Rational(1, 3.0)
+        with pytest.raises(ValueError):
+            Rational(5.0, 5)
 
     def test_rational_numbers_addition(self, rational):
         """Test if 2 rational numbers are returning the correct print value"""
