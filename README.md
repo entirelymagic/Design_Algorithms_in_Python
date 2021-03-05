@@ -16,4 +16,7 @@
 8. Added `__mul__` or method in order to perform multiplication`*` between Rational objects.
 9. Added `__truediv__` method in order to perform division`/` between Rational objects.
 10. Added `__floordiv__` method in order to perform floor division`//` between Rational objects.
-
+10. Added `__iadd__` method in order to perform adding with`+=` between Rational objects.
+10. Added `__isub__` method in order to perform `-=` between Rational objects.
+10. Added `__imul__` method in order to perform `*=` between Rational objects.
+10. Added `__ifloordiv__` method in order to perform `//=` between Rational objects.
