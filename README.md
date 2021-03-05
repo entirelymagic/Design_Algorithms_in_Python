@@ -1,5 +1,7 @@
 # Design_Algorithms_in_Python
 
+>I will be using TDD for the entire project.
+
 ## Chapter 1
 1. Define a Rational class to create rational numbers from 2 integers
 2. Raise `ZeroDivisionError` if denominator from Rational is not different from 0.
