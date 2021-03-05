@@ -57,3 +57,20 @@ class TestRationalClass:
     def test_rational_number_floor_division(self):
         """test __floordiv__  method for Rational objects"""
         assert self.r1 // self.r2
+
+    def test_rational_number_iadd(self):
+        """test __iadd__  method for Rational objects"""
+        assert  self.r1 += self.r2
+
+    def test_rational_number_isub(self):
+        """test __isub__  method for Rational objects"""
+        assert  self.r1 -= self.r2
+
+    def test_rational_number_imul(self):
+        """test __imul__  method for Rational objects"""
+        assert  self.r1 *= self.r2
+
+    def test_rational_number_ifloordiv(self):
+        """test __imul__  method for Rational objects"""
+        assert  self.r1 //= self.r2
+
