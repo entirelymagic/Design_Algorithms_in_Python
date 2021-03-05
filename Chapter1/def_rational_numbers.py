@@ -16,7 +16,7 @@ class Rational:
     @:param a:int - Required numerator
     @:param b:int - Required denominator
 
-    @:raise Error if b==0
+    @:raise Error if b==0 or a and b are not both integers.
     """
 
     processed_numbers: int = 0
@@ -36,6 +36,7 @@ class Rational:
 
     def __str__(self) -> str:
         """Overload default __str__ method.
+
         :return: The string representation of the rational number.
         """
 
@@ -50,7 +51,10 @@ class Rational:
         return Rational(a // lcd, b // lcd)
 
     def __add__(self, other_num: 'Rational') -> 'Rational':
-        """Addition for 2 rational numbers(objects)"""
+        """Addition for 2 rational numbers(objects)
+
+        :return: Rational object
+        """
 
         resulted_numerator = self.a * other_num.b + self.b * other_num.a
         resulted_denominator = self.b * other_num.b
@@ -59,7 +63,10 @@ class Rational:
 
     def __eq__(self, other: 'Rational') -> bool:
         """ Overload default __eq__ method.
-        Test to see if 2 objects Rational are equal"""
+        Test to see if 2 objects Rational are equal
+
+        :return: float
+        """
 
         numerator1 = self.a * other.b
         numerator2 = other.a * self.b
@@ -68,6 +75,8 @@ class Rational:
     def __sub__(self, other: 'Rational') -> 'Rational':
         """Overload default __sub__ method
         Perform subtraction between 2 Rational objects
+
+        :return: Rational object
         """
         resulted_numerator = self.a * other.b - self.b * other.a
         resulted_denominator = self.b * other.b
@@ -75,8 +84,10 @@ class Rational:
         return self._irreducible_fraction(resulted_numerator, resulted_denominator)
 
     def __mul__(self, other: 'Rational'):
-        """Overload default __sub__ method
+        """Overload default __mul__ method
         Perform Multiplication between 2 Rational objects
+
+        :return: Rational object
         """
         resulted_numerator = self.a * other.a
         resulted_denominator = self.b * other.b
@@ -87,20 +98,78 @@ class Rational:
         """Overload default __truediv__ method
         Perform division between 2 Rational objects
 
-        @:return: float
+        :return: float
         """
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
         return resulted_numerator/resulted_denominator
 
-    def __floordiv__(self, other: 'Rational'):
+    def __floordiv__(self, other: 'Rational') -> 'Rational':
         """Overload default __floordiv__ method
         Perform floor division between 2 Rational objects
 
-        @:return  irreducible fraction of the 2 numbers as Rational object
+        :return:  Rational object
         """
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
         # return a Rational number after it is checked that it is not a irreducible_fraction
         return self._irreducible_fraction(resulted_numerator, resulted_denominator)
 
+    def __iadd__(self, other: 'Rational') -> 'Rational':
+        """Add __iadd__ method between 2 Rational Objects
+
+        :return: Rational object
+        """
+        resulted_numerator = self.a * other.b + self.b * other.a
+        resulted_denominator = self.b * other.b
+        # get lowest common denominator
+        lcd = cmmdc(resulted_numerator, resulted_denominator)
+        # assign the new values to self.
+        self.a = resulted_numerator//lcd
+        self.b = resulted_denominator//lcd
+        return self
+
+    def __isub__(self, other: 'Rational') -> 'Rational':
+        """Overload default __isub__ method
+        Perform subtraction between 2 Rational objects
+
+        :return: self
+        """
+        resulted_numerator = self.a * other.b - self.b * other.a
+        resulted_denominator = self.b * other.b
+        # get lowest common denominator
+        lcd = cmmdc(resulted_numerator, resulted_denominator)
+        # assign the new values to self.
+        self.a = resulted_numerator//lcd
+        self.b = resulted_denominator//lcd
+        return self
+
+    def __imul__(self, other: 'Rational'):
+        """Overload default __imul__ method
+        Perform Multiplication between 2 Rational objects
+
+        :return: Rational object
+        """
+        resulted_numerator = self.a * other.a
+        resulted_denominator = self.b * other.b
+        # get lowest common denominator
+        lcd = cmmdc(resulted_numerator, resulted_denominator)
+        # assign the new values to self.
+        self.a = resulted_numerator//lcd
+        self.b = resulted_denominator//lcd
+        return self
+
+    def __ifloordiv__(self, other: 'Rational') -> 'Rational':
+        """Overload default __ifloordiv__ method
+        Perform floor division between 2 Rational objects
+
+        :return:  Rational object
+        """
+        resulted_numerator = self.a * other.b
+        resulted_denominator = self.b * other.a
+        # get lowest common denominator
+        lcd = cmmdc(resulted_numerator, resulted_denominator)
+        # assign the new values to self.
+        self.a = resulted_numerator//lcd
+        self.b = resulted_denominator//lcd
+        return self
