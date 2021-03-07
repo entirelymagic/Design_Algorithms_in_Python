@@ -17,6 +17,11 @@ class Rational:
     @:param b:int - Required denominator
 
     @:raise Error if b==0 or a and b are not both integers.
+
+    On the rational objects can be performed the following  operation:
+    + , -, *, /, //, ==, !=, >, <, >=, <= .
+
+    Has as properties the numerator and denominator, also his decimal_form.
     """
 
     processed_numbers: int = 0
