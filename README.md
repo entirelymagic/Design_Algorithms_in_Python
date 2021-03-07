@@ -1,6 +1,7 @@
 # Design_Algorithms_in_Python
 
->I will be using TDD for the entire project.
+> During this project I will create the project written in English as the book is in Romanian.
+> I will develop all the code using type hints and test driven development.  
 
 ## Chapter 1
 1. Define a Rational class to create rational numbers from 2 integers
@@ -18,7 +19,9 @@
 8. Added `__mul__` or method in order to perform multiplication`*` between Rational objects.
 9. Added `__truediv__` method in order to perform division`/` between Rational objects.
 10. Added `__floordiv__` method in order to perform floor division`//` between Rational objects.
-10. Added `__iadd__` method in order to perform adding with`+=` between Rational objects.
-10. Added `__isub__` method in order to perform `-=` between Rational objects.
-10. Added `__imul__` method in order to perform `*=` between Rational objects.
-10. Added `__ifloordiv__` method in order to perform `//=` between Rational objects.
+11. Added `__iadd__` method in order to perform adding with`+=` between Rational objects.
+12. Added `__isub__` method in order to perform `-=` between Rational objects.
+13. Added `__imul__` method in order to perform `*=` between Rational objects.
+14. Added `__ifloordiv__` method in order to perform `//=` between Rational objects.
+15. Added `__gt__`, `__ge__`, `__lt__`, `__le__`, `__ne__` opperations between Rational objects.
+16. Added `numerator`, `denominator`, `decilaml_form` as properties of Rational objects.
