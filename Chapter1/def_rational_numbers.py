@@ -39,6 +39,14 @@ class Rational:
             # add a new processed number.
             Rational.processed_numbers += 1
 
+    def show(self) -> str:
+        """:return: The string representation of the rational number."""
+        return str(self.a) + '/' + str(self.b)
+
+    def __repr__(self) -> str:
+        """:return: The string representation of the rational number."""
+        return str(self.a) + '/' + str(self.b)
+
     def __str__(self) -> str:
         """Overload default __str__ method.
 
@@ -52,6 +60,7 @@ class Rational:
         """Take numerator and denominator for Rational object
         and return it after checking if it a irreducible fraction.
         """
+
         lcd = cmmdc(a, b)
         return Rational(a // lcd, b // lcd)
 
@@ -83,17 +92,19 @@ class Rational:
 
         :return: Rational object
         """
+
         resulted_numerator = self.a * other.b - self.b * other.a
         resulted_denominator = self.b * other.b
         # return a Rational number after it is checked that it is not a irreducible_fraction
         return self._irreducible_fraction(resulted_numerator, resulted_denominator)
 
-    def __mul__(self, other: 'Rational'):
+    def __mul__(self, other: 'Rational') -> 'Rational':
         """Overload default __mul__ method
         Perform Multiplication between 2 Rational objects
 
         :return: Rational object
         """
+
         resulted_numerator = self.a * other.a
         resulted_denominator = self.b * other.b
         # return a Rational number after it is checked that it is not a irreducible_fraction
@@ -105,6 +116,7 @@ class Rational:
 
         :return: float
         """
+
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
         return resulted_numerator/resulted_denominator
@@ -115,6 +127,7 @@ class Rational:
 
         :return:  Rational object
         """
+
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
         # return a Rational number after it is checked that it is not a irreducible_fraction
@@ -125,6 +138,7 @@ class Rational:
 
         :return: Rational object
         """
+
         resulted_numerator = self.a * other.b + self.b * other.a
         resulted_denominator = self.b * other.b
         # get lowest common denominator
@@ -140,6 +154,7 @@ class Rational:
 
         :return: self
         """
+
         resulted_numerator = self.a * other.b - self.b * other.a
         resulted_denominator = self.b * other.b
         # get lowest common denominator
@@ -149,12 +164,13 @@ class Rational:
         self.b = resulted_denominator//lcd
         return self
 
-    def __imul__(self, other: 'Rational'):
+    def __imul__(self, other: 'Rational') -> 'Rational':
         """Overload default __imul__ method
         Perform Multiplication between 2 Rational objects
 
         :return: Rational object
         """
+
         resulted_numerator = self.a * other.a
         resulted_denominator = self.b * other.b
         # get lowest common denominator
@@ -170,6 +186,7 @@ class Rational:
 
         :return:  Rational object
         """
+
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
         # get lowest common denominator
@@ -179,67 +196,72 @@ class Rational:
         self.b = resulted_denominator//lcd
         return self
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         """Overload default __gt__ method
         Perform greater then operation between 2 Rational objects
 
         :return:  bool
         """
+
         counter1 = self.a * other.b
         counter2 = self.b * other.a
         return counter1 > counter2
 
-    def __ge__(self, other):
+    def __ge__(self, other) -> bool:
         """Overload default __ge__ method
         Perform greater or equal then operation between 2 Rational objects
 
         :return:  bool
         """
+
         counter1 = self.a * other.b
         counter2 = self.b * other.a
         return counter1 >= counter2
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         """Overload default __lt__ method
         Perform less then operation between 2 Rational objects
 
         :return:  bool
         """
+
         counter1 = self.a * other.b
         counter2 = self.b * other.a
         return counter1 < counter2
 
-    def __le__(self, other):
+    def __le__(self, other) -> bool:
         """Overload default __le__ method
         Perform less or equal then operation between 2 Rational objects
 
         :return:  bool
         """
+
         counter1 = self.a * other.b
         counter2 = self.b * other.a
         return counter1 <= counter2
 
-    def __ne__(self, other):
+    def __ne__(self, other) -> bool:
         """Overload default __ne__ method
         Perform not equal then operation between 2 Rational objects
 
         :return:  bool
         """
+
         counter1 = self.a * other.b
         counter2 = self.b * other.a
         return counter1 != counter2
 
     @property
-    def numerator(self):
+    def numerator(self) -> int:
         """:return: a - the Numerator of the rational object"""
         return self.a
 
     @property
-    def denominator(self):
+    def denominator(self) -> int:
         """:return: a - the Numerator of the rational object"""
         return self.b
 
     @property
-    def decimal_form(self):
+    def decimal_form(self) -> float:
         """:return: the value as decimal form of the rational object"""
         return self.a/self.b
