@@ -110,3 +110,17 @@ class TestRationalClass:
     def test_rational_number_ne(self, r1, r2):
         """Test if 2 rational objects can use __ne__ method"""
         assert r2 != r1
+
+    def test_get_numerator(self, r1):
+        """Test to see if given a rational object it can return it's numerator"""
+        assert r1.numerator == 1
+
+    def test_get_denominator(self, r1):
+        """Test to see if given a rational object it can return it's denominator"""
+        assert r1.denominator == 8
+
+    def test_get_decimal_form(self, r1):
+        """Test to see if given a rational object it can return it's decimal form"""
+        assert r1.decimal_form == 0.125
+
+
