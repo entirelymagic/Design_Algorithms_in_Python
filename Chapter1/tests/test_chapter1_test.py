@@ -101,11 +101,11 @@ class TestRationalClass:
 
     def test_rational_number_lt(self, r1, r2):
         """Test if 2 rational objects can use __lt__ method"""
-        assert r2 < r1
+        assert r1 < r2
 
     def test_rational_number_le(self, r1, r2):
         """Test if 2 rational objects can use __le__ method"""
-        assert r2 <= r1
+        assert r1 <= r2
 
     def test_rational_number_ne(self, r1, r2):
         """Test if 2 rational objects can use __ne__ method"""

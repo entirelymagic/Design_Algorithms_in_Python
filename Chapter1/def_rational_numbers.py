@@ -173,3 +173,56 @@ class Rational:
         self.a = resulted_numerator//lcd
         self.b = resulted_denominator//lcd
         return self
+
+    def __gt__(self, other):
+        """Overload default __gt__ method
+        Perform greater then operation between 2 Rational objects
+
+        :return:  bool
+        """
+        counter1 = self.a * other.b
+        counter2 = self.b * other.a
+        return counter1 > counter2
+
+    def __ge__(self, other):
+        """Overload default __ge__ method
+        Perform greater or equal then operation between 2 Rational objects
+
+        :return:  bool
+        """
+        counter1 = self.a * other.b
+        counter2 = self.b * other.a
+        return counter1 >= counter2
+
+    def __lt__(self, other):
+        """Overload default __lt__ method
+        Perform less then operation between 2 Rational objects
+
+        :return:  bool
+        """
+        counter1 = self.a * other.b
+        counter2 = self.b * other.a
+        return counter1 < counter2
+
+    def __le__(self, other):
+        """Overload default __le__ method
+        Perform less or equal then operation between 2 Rational objects
+
+        :return:  bool
+        """
+        counter1 = self.a * other.b
+        counter2 = self.b * other.a
+        return counter1 <= counter2
+
+    def __ne__(self, other):
+        """Overload default __ne__ method
+        Perform not equal then operation between 2 Rational objects
+
+        :return:  bool
+        """
+        counter1 = self.a * other.b
+        counter2 = self.b * other.a
+        return counter1 != counter2
+
+
+
