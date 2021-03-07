@@ -224,5 +224,17 @@ class Rational:
         counter2 = self.b * other.a
         return counter1 != counter2
 
+    @property
+    def numerator(self):
+        """:return: a - the Numerator of the rational object"""
+        return self.a
 
+    @property
+    def denominator(self):
+        """:return: a - the Numerator of the rational object"""
+        return self.b
 
+    @property
+    def decimal_form(self):
+        """:return: the value as decimal form of the rational object"""
+        return self.a/self.b
