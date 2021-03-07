@@ -90,3 +90,23 @@ class TestRationalClass:
         """test __ifloordiv__  method for Rational objects"""
         r1 //= r2
         assert r1.__str__() == "1/2"
+
+    def test_rational_number_gt(self, r1, r2):
+        """Test if 2 rational objects can use __gt__ method"""
+        assert r2 > r1
+
+    def test_rational_number_ge(self, r1, r3):
+        """Test if 2 rational objects can use __ge__ method"""
+        assert r3 >= r1
+
+    def test_rational_number_lt(self, r1, r2):
+        """Test if 2 rational objects can use __lt__ method"""
+        assert r2 < r1
+
+    def test_rational_number_le(self, r1, r2):
+        """Test if 2 rational objects can use __le__ method"""
+        assert r2 <= r1
+
+    def test_rational_number_ne(self, r1, r2):
+        """Test if 2 rational objects can use __ne__ method"""
+        assert r2 != r1
