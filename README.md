@@ -1,9 +1,17 @@
 # Design_Algorithms_in_Python
 
-> During this project I will create the project written in English as the book is in Romanian.
-> I will develop all the code using type hints and test driven development.  
+> During this project I will create the project written in English as the book is in Romanian.  
+> I will develop all the code using type hints and test driven development. 
 
-## Chapter 1 - Object Oriented Programming
+## Chapter 1 - Object-Oriented Programming
+
+> After finishing this chapter the reader will be able to:
+> - define a class with attributes and instantiate an object.
+> - overload operators and magic methods.
+> - implement correctly the `__init__` and `__new__` constructors.
+> - know how to use inheritance, polymorphism and overriding.
+
+
 1.1. Define a Rational class to create rational numbers from 2 integers
 
 1.2. Raise `ZeroDivisionError` if denominator from Rational is not different from 0.
@@ -44,3 +52,18 @@ denominator.
 
 ## Chapter 2 - Algorithm analysis
 
+
+> After finishing this chapter the reader will be able to:
+> - analyze the complexity of algorithms
+> - chose between an algorithm with bigger complexity and one with lower complexity.
+> - to identify the classes of complexity for algorithms
+> - use asymptotic notations to characterize algorithms
+
+2.1. Create 2 algorithms to read elements of a matrix and print tand return the results of total time it took and  
+the total sum of the elements.
+
+2.2. Create a `out.txt` files that will contain the matrix
+
+2.3. Compare the results and add them to a csv files
+
+2.4. Learning about algorithmic function analysis. 

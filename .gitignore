@@ -5,7 +5,14 @@ __pycache__/
 .idea/
 # C extensions
 *.so
+
+# project files
 operations.py
+out100.txt
+out1000.txt
+out5000.txt
+out7500.txt
+
 # Distribution / packaging
 .Python
 build/
