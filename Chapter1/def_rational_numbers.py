@@ -26,18 +26,33 @@ class Rational:
 
     processed_numbers: int = 0
 
-    def __init__(self, a: int, b: int) -> None:
-        if type(a) is not int:
-            raise ValueError("Numerator is not an integer")
-        elif type(b) is not int:
-            raise ValueError("Denominator is not an integer")
-        elif b == 0:
-            raise ValueError("Denominator is equal to 0")
+    def __init__(self, a: int = 0, b: int = 1) -> 'Rational':
+        """Class constructor"""
+        self.a, self.b = a, b
+        Rational.processed_numbers += 1
+
+    def __new__(cls, a: int = 0, b:int = 1):
+        """Class Construct"""
+        if type(a) is int and type(b) is int and b != 0:
+            # return an instance of the Rational class
+            return super(Rational, cls).__new__(cls)
         else:
-            self.a = a
-            self.b = b
-            # add a new processed number.
-            Rational.processed_numbers += 1
+            # return None if a,b are not valid
+            return None
+
+    # the __init method before implementation of __new__
+    # def __init__(self, a: int, b: int) -> None:
+    #     if type(a) is not int:
+    #         raise ValueError("Numerator is not an integer")
+    #     elif type(b) is not int:
+    #         raise ValueError("Denominator is not an integer")
+    #     elif b == 0:
+    #         raise ValueError("Denominator is equal to 0")
+    #     else:
+    #         self.a = a
+    #         self.b = b
+    #         # add a new processed number.
+    #         Rational.processed_numbers += 1
 
     def show(self) -> str:
         """:return: The string representation of the rational number."""
@@ -56,7 +71,7 @@ class Rational:
         return str(self.a) + '/' + str(self.b)
 
     @staticmethod
-    def _irreducible_fraction(a: int, b: int,) -> 'Rational':
+    def _irreducible_fraction(a: int, b: int, ) -> 'Rational':
         """Take numerator and denominator for Rational object
         and return it after checking if it a irreducible fraction.
         """
@@ -119,7 +134,7 @@ class Rational:
 
         resulted_numerator = self.a * other.b
         resulted_denominator = self.b * other.a
-        return resulted_numerator/resulted_denominator
+        return resulted_numerator / resulted_denominator
 
     def __floordiv__(self, other: 'Rational') -> 'Rational':
         """Overload default __floordiv__ method
@@ -144,8 +159,8 @@ class Rational:
         # get lowest common denominator
         lcd = cmmdc(resulted_numerator, resulted_denominator)
         # assign the new values to self.
-        self.a = resulted_numerator//lcd
-        self.b = resulted_denominator//lcd
+        self.a = resulted_numerator // lcd
+        self.b = resulted_denominator // lcd
         return self
 
     def __isub__(self, other: 'Rational') -> 'Rational':
@@ -160,8 +175,8 @@ class Rational:
         # get lowest common denominator
         lcd = cmmdc(resulted_numerator, resulted_denominator)
         # assign the new values to self.
-        self.a = resulted_numerator//lcd
-        self.b = resulted_denominator//lcd
+        self.a = resulted_numerator // lcd
+        self.b = resulted_denominator // lcd
         return self
 
     def __imul__(self, other: 'Rational') -> 'Rational':
@@ -176,8 +191,8 @@ class Rational:
         # get lowest common denominator
         lcd = cmmdc(resulted_numerator, resulted_denominator)
         # assign the new values to self.
-        self.a = resulted_numerator//lcd
-        self.b = resulted_denominator//lcd
+        self.a = resulted_numerator // lcd
+        self.b = resulted_denominator // lcd
         return self
 
     def __ifloordiv__(self, other: 'Rational') -> 'Rational':
@@ -192,8 +207,8 @@ class Rational:
         # get lowest common denominator
         lcd = cmmdc(resulted_numerator, resulted_denominator)
         # assign the new values to self.
-        self.a = resulted_numerator//lcd
-        self.b = resulted_denominator//lcd
+        self.a = resulted_numerator // lcd
+        self.b = resulted_denominator // lcd
         return self
 
     def __gt__(self, other) -> bool:
@@ -264,4 +279,4 @@ class Rational:
     @property
     def decimal_form(self) -> float:
         """:return: the value as decimal form of the rational object"""
-        return self.a/self.b
+        return self.a / self.b
