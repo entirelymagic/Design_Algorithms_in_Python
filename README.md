@@ -67,3 +67,12 @@ the total sum of the elements.
 2.3. Compare the results and add them to a csv files
 
 2.4. Learning about algorithmic function analysis. 
+
+
+## Chapter 3 - Lists, stacks, queues
+
+> After finishing this chapter the reader will be able to:
+> - identify the characteristics of data structures: lists, stacks, queues
+> - implement algorithms that will be able to use the listed data structures
+> - operate with generic lists, stacks and queues.
+
