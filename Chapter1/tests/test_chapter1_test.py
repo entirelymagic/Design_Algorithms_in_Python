@@ -19,25 +19,38 @@ class TestRationalClass:
         r3 = Rational(1, 8)
         return r3
 
-    def test_value_errors(self):
-        """
-        Test if:
-            - ValueError if numerator is not int
-            - ValueError if denominator is not int
-            - ValueError if denominator is 0
-            -
-        """
+    # def test_value_errors(self):
+    #     """
+    #     Test if ValueError when __new__ constructor is not implemented:
+    #         - ValueError if numerator is not int
+    #         - ValueError if denominator is not int
+    #         - ValueError if denominator is 0
+    #         -
+    #     """
+    #
+    #     with pytest.raises(ValueError):
+    #         Rational(3, 0)
+    #     with pytest.raises(ValueError):
+    #         Rational('sal', 1)
+    #     with pytest.raises(ValueError):
+    #         Rational(1, 'hy')
+    #     with pytest.raises(ValueError):
+    #         Rational(1, 3.0)
+    #     with pytest.raises(ValueError):
+    #         Rational(5.0, 5)
 
-        with pytest.raises(ValueError):
-            Rational(3, 0)
-        with pytest.raises(ValueError):
-            Rational('sal', 1)
-        with pytest.raises(ValueError):
-            Rational(1, 'hy')
-        with pytest.raises(ValueError):
-            Rational(1, 3.0)
-        with pytest.raises(ValueError):
-            Rational(5.0, 5)
+    def test_rational_numbers_are_set_to_None_if_values_are_not_valid(self):
+        """Test if the return is none for the denominator or numerator incorrect values"""
+        f1 = Rational(4, 0)
+        f2 = Rational(2.1, 5)
+        f3 = Rational(3, 6.2)
+        f4 = Rational('a', 2)
+        f5 = Rational(3, 'b')
+        assert f1 is None
+        assert f2 is None
+        assert f3 is None
+        assert f4 is None
+        assert f5 is None
 
     def test_rational_numbers_addition(self, r1, r2):
         """Test if 2 rational numbers are returning the correct print value"""
@@ -122,5 +135,3 @@ class TestRationalClass:
     def test_get_decimal_form(self, r1):
         """Test to see if given a rational object it can return it's decimal form"""
         assert r1.decimal_form == 0.125
-
-
