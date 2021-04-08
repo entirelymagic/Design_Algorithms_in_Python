@@ -1,5 +1,5 @@
 from stack_class import Stack
-
+from check_parentheses import check_parentheses
 
 s = Stack()
 
@@ -22,3 +22,7 @@ print("pop in stack is: ", s.pop())
 print("the size of the stack is: ", s.height())
 print("Is the stack empty?", s.its_empty())
 
+first = check_parentheses('((() (())))')
+second = check_parentheses('((() ())))')
+
+print(first, second)
