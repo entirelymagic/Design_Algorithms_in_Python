@@ -3,6 +3,7 @@ import pytest
 from Chapter3 import stack_class
 from Chapter3 import check_parentheses
 from Chapter3 import queue_class
+from Chapter3 import iosif_flavius_problem
 
 
 class TestStackWithLength:
@@ -44,4 +45,8 @@ class TestStackWithLength:
         assert q1.remove() == 'GREEN'
         assert q1.its_empty() is True
 
-
+    def test_iosif_flavius_game(self):
+        list_of_names = ['Ana', 'Madalina', 'Cecilia', 'Elvis', 'Alex', 'Dan']
+        steps = 6
+        x = iosif_flavius_problem.game(list_of_names, steps)
+        assert str(x) == "['Alex']"

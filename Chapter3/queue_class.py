@@ -13,7 +13,7 @@ class Queue:
 
     def __str__(self) -> str:
         """return a string representation of the items from the stack."""
-        return "Show stack: " + str(self.items)
+        return str(self.items)
 
     def add(self, item) -> None:
         """Add the item to the last level of the stack."""

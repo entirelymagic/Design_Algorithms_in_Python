@@ -76,3 +76,8 @@ the total sum of the elements.
 > - implement algorithms that will be able to use the listed data structures
 > - operate with generic lists, stacks and queues.
 
+3.1. Created a OOP implementation of a stack class based on lists.
+
+3.2. Created a OOP implementation of a queue class based on lists.
+
+3.3 Solved Iosif Flavius problem using a queue
