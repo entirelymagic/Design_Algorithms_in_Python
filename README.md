@@ -80,4 +80,14 @@ the total sum of the elements.
 
 3.2. Created a OOP implementation of a queue class based on lists.
 
-3.3 Solved Iosif Flavius problem using a queue
+3.3. Solved Iosif Flavius problem using a queue.
+
+## Chapter 4 - Undirected Graphs
+
+> After finishing this chapter the reader will be able to:
+> - identify concept characteristics(node, edge, grade, chain, cycle, partial graph etc)
+> - implement algorithms that shape information using structured data
+> - we go through a graph in height and width
+> - operate with generic types of graphs.
+
+4.1. Undirected graph
