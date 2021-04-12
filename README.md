@@ -91,3 +91,29 @@ the total sum of the elements.
 > - operate with generic types of graphs.
 
 4.1. Undirected graph
+
+Types of a Graph:
+> - regulated graph: it's an undirected graph in which the nodes have equal grades.
+> - acyclic graph: it's an undirected graph in which the nodes have.
+> - complete graph: a graph that has any two distinct nodes who are adjacent. In a complete graph the grade of any node
+> is  `n-1` and the number of edges is `m = n * (n-1)/2`.
+> - null graph: an undirected graph that has the set of edges void. All edges are isolated.
+> - bipartite graph: an undirected graph `G = (X, U)`
+> - hamiltonian graph: an undirected graph that contain at least 1 hamiltonian cycle.:
+>   - an undirected graph with `n` edges, and the grade of the tip is equal or greater then `n/2` is hamiltonian
+>   - given an elemental chain `[i1, i2, ..., in]` which goes through all nodes of an undirected graph,
+>   if `(d(i1) + d(in)) >= n`, then the graph is hamiltonian.
+>   - for any adjacent pair of nodes `i!=j`, we have `(d(i) + d(j)) >= n`, then the graph is hamiltonian.
+> - eulerian graph: an undirected graph that contain a eulerian circle.
+>   - a chain of an undirected graph that contain each edge once and only once is called eulerian chain.
+>   - a graph is eulerian if and only if all the peaks are isolated, it is connected 
+
+## Chapter 5 - oriented graphs
+> After finishing this chapter the reader will be able to:
+> - identify the characteristic concepts of data structures of type: oriented graphs.
+> - implement algorithms that model the information using oriented graph data structures.
+
+5.1. Oriented Graph:
+
+An oriented graph is an ordered pair `G= (X, U)` where X is the finite set and not null. 
+U is a set of ordered pairs of distinct elements of X named arcs.
