@@ -109,11 +109,25 @@ Types of a Graph:
 >   - a graph is eulerian if and only if all the peaks are isolated, it is connected 
 
 ## Chapter 5 - oriented graphs
+
+An oriented graph is an ordered pair `G= (X, U)` where X is the finite set and not null. 
+U is a set of ordered pairs of distinct elements of X named arcs.
+
+
 > After finishing this chapter the reader will be able to:
 > - identify the characteristic concepts of data structures of type: oriented graphs.
 > - implement algorithms that model the information using oriented graph data structures.
 
-5.1. Oriented Graph:
 
-An oriented graph is an ordered pair `G= (X, U)` where X is the finite set and not null. 
-U is a set of ordered pairs of distinct elements of X named arcs.
+5.1. Circuit:
+> - A circuit is an ordered graph in which the path from the initial node coincide with the end node 
+> - An elementary circuit is a circuit in which, exception the extremities, the nodes do not repeat.
+
+5.2. Chain:
+> - in an oriented graph, it is called a chain if a succession of arches `(i1, i2), (i2, i3), ..., (ik-1, ik)` noted
+> (i1, i2, ik) with the properties that any 2  consecutive arches have a common extremity( does not matter the orientation).
+
+5.3. A connected graph 
+> - is a graph that is connected in the sense of a topological space, i.e., there is a path from any
+> point to any other point in the graph. A graph that is not connected is said to be disconnected. This definition means that the null graph and singleton graph are considered connected, while empty graphs on n>=2 nodes are disconnected.
+
