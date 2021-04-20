@@ -131,3 +131,11 @@ U is a set of ordered pairs of distinct elements of X named arcs.
 > - is a graph that is connected in the sense of a topological space, i.e., there is a path from any
 > point to any other point in the graph. A graph that is not connected is said to be disconnected. This definition means that the null graph and singleton graph are considered connected, while empty graphs on n>=2 nodes are disconnected.
 
+
+## Chapter 6 - Tree-structures
+
+> After finishing this chapter the reader will be able to:
+> - identify concepts characteristic to tree structures
+> - implement algorithms that model the information using data tree structures
+> - traverse tree structure data
+
