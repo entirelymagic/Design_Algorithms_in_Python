@@ -140,6 +140,4 @@ U is a set of ordered pairs of distinct elements of X named arcs.
 > - traverse tree structure data
 
 
-## Chapter 7 - Search, Select, Sort
-
-> -
+## Chapter 7 - Search, Select, Sor
