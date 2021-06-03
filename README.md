@@ -139,3 +139,7 @@ U is a set of ordered pairs of distinct elements of X named arcs.
 > - implement algorithms that model the information using data tree structures
 > - traverse tree structure data
 
+
+## Chapter 7 - Search, Select, Sort
+
+> -
