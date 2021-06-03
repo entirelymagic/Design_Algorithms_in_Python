@@ -26,3 +26,9 @@ class TestOrderedListSearch:
         assert search_unordered_list(ol1, 14) == 3
         assert search_unordered_list(ol1, 432) == 6
         assert search_unordered_list(ol1, 500) is None
+
+    def test_binary_search_for_ordered_list(self, ol1):
+        assert search_unordered_list(ol1, 14) == 3
+        assert search_unordered_list(ol1, 432) == 6
+        assert search_unordered_list(ol1, 500) is None
+
