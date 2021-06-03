@@ -1,6 +1,6 @@
 import pytest
 
-from Chapter7.search_algorithms.unordered_liniar_search import search_unordered_list
+from Chapter7.search_algorithms.unordered_liniar_search import search_unordered_list, search_ordered_list
 
 
 class TestUnorderedListSearch:
@@ -23,12 +23,12 @@ class TestOrderedListSearch:
         return list1
 
     def test_finding_element_in_ordered_list(self, ol1):
-        assert search_unordered_list(ol1, 14) == 3
-        assert search_unordered_list(ol1, 432) == 6
-        assert search_unordered_list(ol1, 500) is None
+        assert search_ordered_list(ol1, 14) == 3
+        assert search_ordered_list(ol1, 432) == 6
+        assert search_ordered_list(ol1, 500) is None
 
     def test_binary_search_for_ordered_list(self, ol1):
-        assert search_unordered_list(ol1, 14) == 3
-        assert search_unordered_list(ol1, 432) == 6
-        assert search_unordered_list(ol1, 500) is None
+        assert search_ordered_list(ol1, 14) == 3
+        assert search_ordered_list(ol1, 432) == 6
+        assert search_ordered_list(ol1, 500) is None
 
